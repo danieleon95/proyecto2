@@ -16,6 +16,15 @@ def predict(year,mileage,state,make,model):
     p1 = mod.predict(df2)
     return p1
 
-predict(2010,3000,'OK',"BMW","1")
+if __name__ == "__main__":
+    
+    if len(sys.argv) == 1:
+        print('Please add information')
+        
+    else:
+
+        p1 = predict(sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5])
+        
+        print('result: ', p1)
 
         
