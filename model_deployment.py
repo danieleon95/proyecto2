@@ -5,7 +5,7 @@ import sys
 import os
 
 def predict(year,mileage,state,make,model):
-    mod = joblib.load(os.path.dirname(__file__) + '/RandomForestPrice2.pkl') 
+    mod = joblib.load(os.path.dirname(__file__) + '/model.pkl') 
     cols = joblib.load(os.path.dirname(__file__) + '/columns_mod.pkl')
     d = {'Year':[year],'Mileage':[mileage],'State':[state],'Make':[make],'Model':[model]}
     df = pd.DataFrame(data=d)
